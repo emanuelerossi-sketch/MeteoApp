@@ -1,7 +1,19 @@
 import { IoBookmarks, IoCloudyNight, IoSearch, IoSunny } from "react-icons/io5";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Load } from "../components/Load";
 import "../css/HomePage.css";
 
 export function HomePage() {
+    const [citta, setCitta] = useState<string>("");
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        if (citta.trim()) {
+            navigate(`/meteo/${encodeURIComponent(citta)}`);
+        }
+    };
+
     return (
         <div className="home-page">
             <div className="main-section">
@@ -19,7 +31,7 @@ export function HomePage() {
                         <input type="text" placeholder="Es: Roma, Parigi, Tokyo..." />
                         <button className="btn-cerca"> <IoSearch className="search-icon" />Cerca</button>
                     </div>
-                    <button className="btn-savedLoc"> <IoBookmarks className="search-icon"/>Città salvate</button>
+                    <button className="btn-savedLoc" onClick={() => navigate("/preferiti")}> <IoBookmarks className="search-icon"/>Città salvate</button>
                 </div>
             </div>
         </div>

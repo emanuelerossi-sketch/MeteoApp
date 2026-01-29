@@ -1,0 +1,128 @@
+/* src/css/SavedLoc.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
+.savedLocpage {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.saved-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.saved-container h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.saved-city {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 20px 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.saved-city:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.city-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.city-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.city-info:hover .city-name {
+  color: #00d2ff;
+}
+
+.delete-btn {
+  background: rgba(255, 75, 43, 0.1);
+  border: none;
+  color: #ff4b2b;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background: #ff4b2b;
+  color: white;
+  transform: rotate(10deg);
+}
+
+.empty-msg {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-top: 50px;
+}
+
+.btn-back {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

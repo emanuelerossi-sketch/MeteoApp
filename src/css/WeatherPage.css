@@ -1,0 +1,207 @@
+/* src/css/WeatherPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.weatherpage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: muoviSfondo 15s ease infinite;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+@keyframes muoviSfondo {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-favorite {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+}
+.btn-favorite:hover {
+  transform: scale(1.05);
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 25px;
+}
+
+.main-card h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.temperatura-adesso {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.icona-grande {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+  animation: galleggia 3s ease-in-out infinite;
+}
+
+@keyframes galleggia {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.temp-grande {
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.descrizione {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.griglia-dettagli {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.dettaglio {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dettaglio .icona {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.etichetta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.valore {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 5px 0 0 0;
+}
+
+.alba-tramonto {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.sole {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icona-sole {
+  font-size: 2rem;
+}
+
+.ora {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.lista-giorni {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.giorno {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nome-giorno {
+  font-weight: 600;
+  text-transform: capitalize;
+  min-width: 60px;
+}
+
+.icona-giorno {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.temperature {
+  display: flex;
+  gap: 15px;
+  font-weight: 700;
+}
+
+.max {
+  color: #ff6b6b;
+}
+
+.min {
+  color: #4ecdc4;
+}
+
+
+

@@ -2,15 +2,17 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoArrowBack, IoLocationSharp, IoTrashOutline } from "react-icons/io5";
 import "../css/SavedLoc.css";
+import { Load } from "../components/Load";
 
 export function SavedLoc() {
 const [preferiti, setPreferiti] = useState<string[]>([]);
 const navigate = useNavigate();
-
+const [isLoading, setIsLoading] = useState(true);
 useEffect(() => {
     // Verifico se ci sono città salvate nei preferiti
     const salvati = JSON.parse(localStorage.getItem("preferiti") || "[]");
     setPreferiti(salvati);
+    setIsLoading(false);
 }, []);
 
 // Funzione per rimuovere una città dai preferiti
@@ -20,6 +22,10 @@ const rimuoviCitta = (cittaDaRimuovere: string) => {
     localStorage.setItem("preferiti", JSON.stringify(nuoviPreferiti));
     setPreferiti(nuoviPreferiti);
 };
+
+if (isLoading) {
+    return <Load />;
+}
 
 return (
     <div className="savedLocpage">

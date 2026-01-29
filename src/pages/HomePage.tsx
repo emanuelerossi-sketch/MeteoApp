@@ -1,8 +1,8 @@
 import { IoBookmarks, IoCloudyNight, IoSearch, IoSunny } from "react-icons/io5";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Load } from "../components/Load";
 import "../css/HomePage.css";
+import { Footer } from "../components/Footer";
 
 export function HomePage() {
     const [citta, setCitta] = useState<string>("");
@@ -35,5 +35,6 @@ export function HomePage() {
                 </div>
             </div>
         </div>
+        
     );
 }

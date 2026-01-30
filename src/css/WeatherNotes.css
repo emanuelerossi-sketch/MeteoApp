@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
+@keyframes muoviSfondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 25px;
+}
+
+.btn-salva {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+#note-meteo-field {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+
+.notes-container {
+  width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto;    
+  box-sizing: border-box;
+}
+
+.notes-card {
+  width: 100%;       
+  box-sizing: border-box;
+}
+
+.note-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+@keyframes galleggia {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

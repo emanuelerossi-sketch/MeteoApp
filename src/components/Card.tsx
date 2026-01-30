@@ -4,9 +4,9 @@ import "../css/Card.css";
 // Definizione delle proprietà del componente Card
 interface CardProps {
     // Contenuto interno della card
-    children: ReactNode;
+    children?: ReactNode;
     title?: string;
-    className: string;
+    className?: string;
 }
 
 

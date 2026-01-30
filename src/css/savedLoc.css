@@ -89,7 +89,7 @@
 .delete-btn:hover {
   background: #ff4b2b;
   color: white;
-  transform: rotate(10deg);
+  transform: scale(1.05)
 }
 
 .empty-msg {

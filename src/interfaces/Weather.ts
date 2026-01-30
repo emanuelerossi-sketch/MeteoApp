@@ -31,5 +31,5 @@ export interface WeatherData {
         weathercode: number[];
         time: string[];
     };
-  
+
 }

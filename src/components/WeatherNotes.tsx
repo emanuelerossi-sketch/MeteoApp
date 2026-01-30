@@ -80,11 +80,12 @@ export function WeatherNotes({ city }: WeatherNotesProps) {
                     disabled={!noteText.trim() || saveNoteMutation.isPending}
                 >
                     <IoSend size={20} />
+                    {/* Testo del bottone cambia in base allo stato della mutazione */}
                     {saveNoteMutation.isPending ? "Salvataggio..." : "Salva nota"}
                 </button>
             </div>
 
-
+            {/* Messaggi di errore o successo */}
             {saveNoteMutation.isError && (
                 <p className="error-msg">Errore nel salvataggio della nota</p>
             )}

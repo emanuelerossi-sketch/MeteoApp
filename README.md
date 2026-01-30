@@ -1,3 +1,58 @@
+# DESCRIZIONE DEL PROGETTO
+WeatherApp è un'applicazione web realizzata con React e Typescript che permette di consultare le previsioni meteo in tempo reale per qualsiasi città del mondo. L'applicazione offre funzionalità di salvataggio delle città preferite e la possibilità di aggiungere note personalizzate sul meteo.
+
+# SCOPO DEL PROGETTO
+Ho scelto di creare un'applicazione sul meteo perchè le previsioni atmosferiche mi appassionano molto. Inoltre, durante lo sviluppo, ho potuto mettere in pratica molti concetti studiati a lezione e ho potuto imparare molte altre cose nuove
+
+# FUNZIONALITA' PRINCIPALI
+RICERCA METEO: Cerca le previsioni meteo per qualsiasi città
+DETTAGLI COMPLETI: Visualizza temperatura, umidità, vento, UV, alba e tramonto
+PREVISIONI SETTIMANALI: Consulta le previsioni per i prossimi 7 giorni
+CITTA PREFERITE: Permette di salvare le città preferite
+NOTE SUL METEO: Permette di aggiungere note personalizzate sul meteo
+
+# API UTILIZZATE -> Non richiedono credenziali
+- OPEN METEO: 
+  Usata per ottenere dati meteo in tempo reale, come temperatura, velocità del vento, umidità...
+  
+- OPEN METEO geocoding: 
+  Usata per convertire i nomi delle città in coordinate geografiche
+
+- JSONPlaceholder (POST): 
+  Usata per simulare il salvataggio delle note meteo
+
+# STRUTTURA DEL PROGETTO
+meteo-app/
+├── src/
+│   ├── components/          
+│   │   ├── Card.tsx
+|   |   |── Footer.tsx 
+│   │   ├── Load.tsx
+│   │   └── WeatherNotes.tsx
+│   ├── pages/              
+│   │   ├── HomePage.tsx
+│   │   ├── WeatherPage.tsx
+│   │   ├── SavedLocPage.tsx
+│   │   └── NotFoundPage.tsx
+│   ├── interfaces/               
+│   │   └── Weather.ts  
+│   ├── css/               
+│   │   ├── HomePage.css
+│   │   ├── WeatherPage.css
+│   │   ├── SavedLocPage.css
+│   │   ├── Footer.css
+│   │   ├── Card.css
+│   │   ├── Load.css
+│   │   └── WeatherNotes.css
+│   ├── App.tsx            
+│   └── main.tsx           
+├── package.json
+└── README.md
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

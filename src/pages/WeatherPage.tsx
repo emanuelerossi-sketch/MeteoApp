@@ -176,12 +176,14 @@ export default function WeatherPage() {
 
 					<div className="temperatura-adesso">
 						<div className="icona-grande">
+							{/* Icona meteo principale */}
 							{getWeatherIcon(weather.current_weather.weathercode, 80)}
 						</div>
 						<div className="temp-grande">{Math.round(weather.current_weather.temperature)}°C</div>
 						<p className="descrizione">{getWeatherDescription(weather.current_weather.weathercode)}</p>
 					</div>
 
+					{/* Sezione dettagli meteo */}
 					<div className="griglia-dettagli">
 						<div className="dettaglio">
 							<span className="icona"><LuWind /></span>
@@ -216,6 +218,7 @@ export default function WeatherPage() {
 						</div>
 					</div>
 
+					{/* Sezione alba e tramonto */}
 					<div className="alba-tramonto">
 						<div className="sole">
 							<span className="icona-sole"><LuSunrise color="#FFA500" /></span>
@@ -234,6 +237,7 @@ export default function WeatherPage() {
 					</div>
 				</Card>
 
+				{/* Sezione previsioni settimanali */}
 				<Card title="Previsioni Settimanali" className="weekly-card">
 					<div className="lista-giorni">
 						{weather.daily.time.slice(1, 7).map((date, i) => {
@@ -246,6 +250,7 @@ export default function WeatherPage() {
 									<span className="icona-giorno">
 										{getWeatherIcon(weather.daily.weathercode[indice], 30)}
 									</span>
+									{/* Temperature massima e minima */}
 									<div className="temperature">
 										<span className="max">{Math.round(weather.daily.temperature_2m_max[indice])}°</span>
 										<span className="min">{Math.round(weather.daily.temperature_2m_min[indice])}°</span>
@@ -256,6 +261,8 @@ export default function WeatherPage() {
 					</div>
 				</Card>
 			</div>
+
+			{/*Sezione note meteo*/}
 			<div className="notes-container">
 				<Card title="Le tue note sul meteo" className="notes-card">
 					<WeatherNotes city={coords.name} />

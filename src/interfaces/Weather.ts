@@ -1,3 +1,4 @@
+// interfacce per i dati meteo e le coordinate geografiche
 export interface Coordinates {
     latitude: number;
     longitude: number;

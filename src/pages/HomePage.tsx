@@ -1,14 +1,17 @@
-import { IoBookmarks, IoCloudyNight, IoSearch, IoSunny } from "react-icons/io5";
+import { IoBookmarks, IoCloudyNight, IoSearch, IoSunny } from "react-icons/io5";  // Icone di react-icons
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/HomePage.css";
 
 export function HomePage() {
+    // Stato per gestire l'input della città
     const [citta, setCitta] = useState<string>("");
     const navigate = useNavigate();
 
+    // Funzione per gestire la ricerca della città
     const handleSearch = () => {
         if (citta.trim()) {
+            // Navigo alla pagina del meteo per la città specificata
             navigate(`/meteo/${encodeURIComponent(citta)}`);
         }
     };

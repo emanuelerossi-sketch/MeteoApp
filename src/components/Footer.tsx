@@ -10,6 +10,7 @@ export function Footer() {
         <p>© {annoCorrente} Emanuele Rossi - MeteoApp</p>
 
         <div className="footer-links">
+          {/* Link al repository GitHub del progetto*/}
           <a href="https://github.com/emanuelerossi-sketch/MeteoApp" target="_blank" rel="noreferrer">
             <FaGithub size={20} />
           </a>

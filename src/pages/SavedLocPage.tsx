@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { IoArrowBack, IoLocationSharp, IoTrashOutline } from "react-icons/io5";
+import { IoArrowBack, IoLocationSharp } from "react-icons/io5";
 import "../css/SavedLoc.css";
 import { Load } from "../components/Load";
 
@@ -23,6 +23,7 @@ export function SavedLoc() {
         setPreferiti(nuoviPreferiti);
     };
 
+    // Mostro il caricamento se isLoading è true
     if (isLoading) {
         return <Load />;
     }

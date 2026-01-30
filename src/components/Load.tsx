@@ -1,5 +1,6 @@
 import "../css/Load.css";
 
+// Componente per mostrare il caricamento
 export function Load() {
   return (
     <div className="loading-container">
